@@ -1,243 +1,276 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Futbolista Profesional | Cursos de Fútbol</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Futbolista Profesional | Cursos y Formación</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Futbolista profesional. Cursos de fútbol para niños de todas las edades y creación de sitios web profesionales.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background:#0d0f12; color:#fff; }
 
-<style>
-:root{
---bg:#0f1113;
---card:#1b1e22;
---accent:#25d366;
---text:#ffffff;
---muted:#b5b5b5;
-}
+    a { text-decoration: none; }
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:var(--bg);color:var(--text);}
+    header {
+      background:#000;
+      padding:15px 30px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
 
-.container{max-width:1000px;margin:auto;padding:0 24px}
+    header h1 { font-size:18px; }
 
-/* HEADER */
-header{background:#000;padding:18px 0;position:sticky;top:0;z-index:100}
-.header-flex{display:flex;justify-content:space-between;align-items:center}
-.logo{font-weight:700;letter-spacing:1px}
+    .socials a {
+      background:#1ed760;
+      color:#000;
+      padding:8px 14px;
+      border-radius:20px;
+      margin-left:8px;
+      font-size:13px;
+      font-weight:600;
+    }
 
-.socials a{
-margin-left:10px;
-padding:8px 16px;
-border-radius:20px;
-background:var(--accent);
-color:#000;
-font-size:13px;
-font-weight:600;
-}
+    .hero {
+      background:url("https://images.unsplash.com/photo-1521412644187-c49fa049e84d") center/cover no-repeat;
+      padding:120px 20px;
+      text-align:center;
+    }
 
-/* HERO */
-.hero{
-padding:130px 0;
-background:
-linear-gradient(to bottom, rgba(0,0,0,.6), rgba(0,0,0,.9)),
-url("https://images.unsplash.com/photo-1521412644187-c49fa049e84d") center/cover;
-text-align:center;
-}
-.hero h1{font-size:2.8rem;margin-bottom:20px}
-.hero p{max-width:700px;margin:auto;font-size:1.1rem;color:var(--muted)}
+    .hero h2 { font-size:40px; margin-bottom:10px; }
+    .hero p { font-size:18px; opacity:.9; }
 
-/* SECTIONS */
-section{padding:90px 0}
-.section-card{
-background:var(--card);
-border-radius:22px;
-padding:60px;
-}
+    .container {
+      max-width:1100px;
+      margin:auto;
+      padding:80px 20px;
+    }
 
-/* TITLES */
-.section-title{
-text-align:center;
-margin-bottom:50px;
-}
-.section-title h2{font-size:2.2rem}
-.section-title p{color:var(--muted);margin-top:10px}
+    .section-card {
+      background:#15181d;
+      border-radius:20px;
+      padding:50px;
+      margin-bottom:60px;
+    }
 
-/* CARDS */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-}
-.box{
-background:#23262b;
-border-radius:20px;
-padding:30px;
-}
-.box h3{margin-bottom:10px}
+    .section-title {
+      text-align:center;
+      margin-bottom:40px;
+    }
 
-/* GALLERY */
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:20px;
-}
-.gallery img{
-width:100%;
-height:220px;
-object-fit:cover;
-border-radius:18px;
-}
+    .section-title h2 { font-size:32px; }
+    .section-title p { opacity:.7; }
 
-/* CONTACT */
-.contact{
-text-align:center;
-}
-.contact p{margin:10px 0}
-.stars i{color:#ffcc00;font-size:22px}
-.contact button{
-margin-top:20px;
-padding:14px 26px;
-border:none;
-border-radius:30px;
-font-weight:600;
-cursor:pointer;
-}
+    .about-grid {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:center;
+    }
 
-/* FOOTER */
-footer{
-background:#000;
-padding:30px;
-text-align:center;
-color:var(--muted);
-}
+    .video-wrapper {
+      position:relative;
+      padding-top:56.25%;
+      border-radius:16px;
+      overflow:hidden;
+    }
 
-/* FLOAT BUTTONS */
-.float{
-position:fixed;
-right:20px;
-width:56px;
-height:56px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:26px;
-color:#fff;
-z-index:200;
-}
-.whatsapp{background:#25d366;top:45%}
-.waze{background:#00aaff;top:55%}
-.maps{background:#e53935;top:55%}
+    .video-wrapper iframe {
+      position:absolute;
+      top:0; left:0;
+      width:100%; height:100%;
+    }
 
-.mobile-only{display:none}
-.desktop-only{display:flex}
+    .about-text h3 { margin-bottom:15px; }
+    .about-text p { margin-bottom:12px; opacity:.9; line-height:1.6; }
 
-@media(max-width:768px){
-.desktop-only{display:none}
-.mobile-only{display:flex}
-.hero h1{font-size:2.2rem}
-.section-card{padding:40px 25px}
-}
-</style>
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:25px;
+    }
+
+    .box {
+      background:#1b1f26;
+      padding:25px;
+      border-radius:16px;
+      text-align:center;
+    }
+
+    .gallery img {
+      width:100%;
+      border-radius:16px;
+    }
+
+    footer {
+      background:#000;
+      padding:50px 20px;
+      text-align:center;
+    }
+
+    footer p { margin-bottom:10px; }
+
+    .rating span {
+      font-size:22px;
+      color:gold;
+    }
+
+    .btn {
+      background:#1ed760;
+      color:#000;
+      padding:10px 20px;
+      border-radius:20px;
+      display:inline-block;
+      margin-top:10px;
+      font-weight:600;
+    }
+
+    /* WHATSAPP */
+    .whatsapp-float {
+      position:fixed;
+      bottom:50%;
+      right:20px;
+      transform:translateY(50%);
+      background:#25D366;
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:30px;
+      color:#fff;
+      z-index:999;
+    }
+
+    .maps-float {
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#e53935;
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:26px;
+      color:#fff;
+    }
+
+    @media(max-width:768px){
+      .about-grid { grid-template-columns:1fr; }
+      .maps-float { display:none; }
+    }
+
+    @media(min-width:769px){
+      .waze-mobile { display:none; }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-  <div class="container header-flex">
-    <div class="logo">FUTBOLISTA PRO</div>
-    <div class="socials">
-      <a href="#">Instagram</a>
-      <a href="#">Facebook</a>
-      <a href="#">TikTok</a>
-    </div>
+  <h1>FUTBOLISTA PRO</h1>
+  <div class="socials">
+    <a href="#">Instagram</a>
+    <a href="#">Facebook</a>
+    <a href="#">TikTok</a>
   </div>
 </header>
 
-<div class="hero">
-  <h1>Futbolista Profesional</h1>
-  <p>Cursos de fútbol para niños de todas las edades, formación deportiva y desarrollo de talento en Panamá</p>
-</div>
+<section class="hero">
+  <h2>Futbolista Profesional</h2>
+  <p>Cursos de fútbol para niños de todas las edades</p>
+</section>
 
-<section>
-  <div class="container section-card">
+<div class="container">
+
+  <!-- QUIÉN SOY -->
+  <section class="section-card">
     <div class="section-title">
       <h2>Quién Soy</h2>
       <p>Experiencia, disciplina y pasión por el fútbol</p>
     </div>
-    <p>Soy futbolista profesional dedicado a la formación de niños y jóvenes, enfocándome en técnica, valores y crecimiento personal.</p>
-  </div>
-</section>
 
-<section>
-  <div class="container section-card">
+    <div class="about-grid">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        allowfullscreen></iframe>
+      </div>
+
+      <div class="about-text">
+        <h3>Trayectoria Deportiva</h3>
+        <p>
+          Soy futbolista profesional dedicado a la formación de niños y jóvenes,
+          ayudándolos a desarrollar habilidades deportivas y valores personales.
+        </p>
+        <p>
+          Mi objetivo es formar jugadores completos, disciplinados y preparados
+          para los retos dentro y fuera de la cancha.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURSOS -->
+  <section class="section-card">
     <div class="section-title">
       <h2>Cursos de Fútbol</h2>
     </div>
+
     <div class="grid">
       <div class="box">
         <h3>Niños y Jóvenes</h3>
-        <p>Entrenamiento para todas las edades con base técnica y física.</p>
+        <p>Entrenamiento para todas las edades.</p>
       </div>
       <div class="box">
         <h3>Formación Integral</h3>
-        <p>Trabajo en equipo, disciplina y valores deportivos.</p>
+        <p>Valores, disciplina y trabajo en equipo.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section>
-  <div class="container section-card">
+  <!-- GALERÍA -->
+  <section class="section-card gallery">
     <div class="section-title">
       <h2>Galería</h2>
     </div>
-    <div class="gallery">
+
+    <div class="grid">
       <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6">
       <img src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf">
       <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d">
-      <img src="https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a">
     </div>
-  </div>
-</section>
+  </section>
 
-<section>
-  <div class="container section-card contact">
-    <div class="section-title">
-      <h2>Contacto</h2>
-    </div>
-    <p>📍 Calle del IPA, Edificio Anápolis<br>Frente a PH Acuarela – Panamá</p>
-    <p>📞 6669-0578</p>
-    <div class="stars">
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-regular fa-star"></i>
-    </div>
-    <button>Enviar sugerencia</button>
-  </div>
-</section>
+</div>
 
 <footer>
-  © 2026 Futbolista Profesional
+  <p>📍 Calle del IPA, Edificio Anápolis – Frente a PH Acuarela</p>
+  <p>📞 6669-0578</p>
+
+  <div class="rating">
+    <span>★ ★ ★ ★ ★</span>
+  </div>
+
+  <a class="btn" href="#">Enviar sugerencia</a>
+
+  <p style="margin-top:20px;">© 2026 Futbolista Profesional</p>
 </footer>
 
-<a class="float whatsapp" href="https://wa.me/50766690578" target="_blank">
-<i class="fa-brands fa-whatsapp"></i>
-</a>
+<!-- BOTONES FLOTANTES -->
+<a class="whatsapp-float" href="https://wa.me/50766690578" target="_blank">💬</a>
 
-<a class="float waze mobile-only"
-href="https://waze.com/ul?q=Calle%20del%20IPA%20Edificio%20Anápolis%20Panamá" target="_blank">
-<i class="fa-brands fa-waze"></i>
-</a>
+<a class="maps-float" href="https://www.google.com/maps/search/Calle+del+IPA+Edificio+Anapolis+Panama" target="_blank">📍</a>
 
-<a class="float maps desktop-only"
-href="https://www.google.com/maps/search/?api=1&query=Calle+del+IPA+Edificio+Anápolis+Panamá" target="_blank">
-<i class="fa-solid fa-map-location-dot"></i>
-</a>
+<a class="whatsapp-float waze-mobile" style="right:90px;" href="https://waze.com/ul?q=Calle%20del%20IPA%20Edificio%20Anapolis" target="_blank">🧭</a>
 
 </body>
 </html>
