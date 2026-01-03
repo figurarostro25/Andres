@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Futbolista Profesional | Cursos de Fútbol y Webmaster</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Futbolista profesional en Panamá. Cursos de fútbol para niños de todas las edades y creación de sitios web profesionales.">
+<meta name="keywords" content="curso de fútbol para niños, futbolista profesional, sitio web, webmaster Panamá">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#0e0e0e;color:#fff;line-height:1.6;}
+a{text-decoration:none;color:inherit}
+.container{width:90%;max-width:1200px;margin:auto}
+
+/* HEADER */
+header{background:#000;padding:20px 0;position:sticky;top:0;z-index:100}
+.header-flex{display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px}
+.logo svg{width:50px;height:50px}
+nav a{margin-left:20px;font-weight:500}
+nav a:hover{color:#25d366}
+
+/* SLIDER */
+.slider{height:90vh;display:flex;align-items:center;justify-content:center;background-size:cover;background-position:center;text-align:center}
+.slider h1{font-size:3rem}
+.slider p{max-width:700px;margin:15px auto}
+
+/* SECTIONS */
+section{padding:80px 0}
+.dark{background:#111}
+.title{text-align:center;margin-bottom:50px}
+.title h2{font-size:2.5rem}
+
+/* CARDS */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+.card{background:#1a1a1a;padding:30px;border-radius:12px}
+.card:hover{transform:translateY(-5px);transition:.3s}
+
+/* GALLERY */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px}
+.gallery img{width:100%;border-radius:10px}
+
+/* BLOG */
+.blog-post{background:#1c1c1c;padding:25px;border-radius:10px}
+
+/* FORM */
+form input, form select, form textarea{
+width:100%;padding:12px;margin-bottom:15px;border:none;border-radius:8px}
+form button{background:#25d366;color:#000;padding:14px;width:100%;border:none;border-radius:8px;font-size:16px;font-weight:600;cursor:pointer}
+form button:hover{background:#1ebe5c}
+
+/* FOOTER */
+footer{background:#000;padding:30px 0;text-align:center}
+footer strong{color:#25d366}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float{
+position:fixed;bottom:20px;right:20px;
+background:#25d366;color:#fff;
+width:60px;height:60px;border-radius:50%;
+display:flex;align-items:center;justify-content:center;
+font-size:30px;z-index:200}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container header-flex">
+    <div class="logo">
+      <!-- LOGO TEMPORAL -->
+      <svg viewBox="0 0 64 64" fill="black">
+        <path d="M32 4c10 0 18 8 18 18 0 6-3 11-7 14l3 20H18l3-20c-4-3-7-8-7-14C14 12 22 4 32 4z"/>
+      </svg>
+      <strong>FUTBOLISTA PRO</strong>
+    </div>
+    <nav>
+      <a href="#bio">Biografía</a>
+      <a href="#cursos">Cursos</a>
+      <a href="#webmaster">Webmaster</a>
+      <a href="#blog">Blog</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<!-- SLIDER 1 -->
+<div class="slider" style="background-image:url('https://images.unsplash.com/photo-1521412644187-c49fa049e84d');">
+  <div>
+    <h1>Futbolista Profesional</h1>
+    <p>Entrenando, inspirando y formando nuevas generaciones a través del fútbol</p>
+  </div>
+</div>
+
+<!-- SLIDER 2 -->
+<div class="slider" style="background-image:url('https://images.unsplash.com/photo-1518091043644-c1d4457512c6');height:70vh">
+  <div>
+    <h1>Cursos de Fútbol para Niños</h1>
+    <p>Para todas las edades • Técnica • Disciplina • Valores</p>
+  </div>
+</div>
+
+<!-- SLIDER 3 -->
+<div class="slider" style="background-image:url('https://images.unsplash.com/photo-1507238691740-187a5b1d37b8');height:70vh">
+  <div>
+    <h1>Webmaster Profesional</h1>
+    <p>Creación de sitios web modernos y optimizados para SEO</p>
+  </div>
+</div>
+
+<section id="bio">
+  <div class="container">
+    <div class="title"><h2>Mi Biografía</h2></div>
+    <p>Soy futbolista profesional con experiencia en eventos deportivos, formación de talentos jóvenes y desarrollo de proyectos digitales. A lo largo de mi carrera he trabajado con niños de todas las edades, fomentando valores, disciplina y pasión por el deporte. Además, como webmaster, ayudo a emprendedores y profesionales a tener presencia digital sólida y efectiva.</p>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="container">
+    <div class="title"><h2>Eventos y Galería</h2></div>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/500x300">
+      <img src="https://via.placeholder.com/500x300">
+      <img src="https://via.placeholder.com/500x300">
+    </div>
+  </div>
+</section>
+
+<section id="cursos">
+  <div class="container">
+    <div class="title"><h2>Cursos de Fútbol</h2></div>
+    <div class="cards">
+      <div class="card">
+        <h3>Niños y Jóvenes</h3>
+        <p>Entrenamientos personalizados y grupales para todas las edades.</p>
+      </div>
+      <div class="card">
+        <h3>Formación Integral</h3>
+        <p>Técnica, táctica, valores y disciplina deportiva.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="webmaster" class="dark">
+  <div class="container">
+    <div class="title"><h2>Webmaster</h2></div>
+    <p>Solicita la creación de tu sitio web profesional o inscríbete en cursos de fútbol.</p>
+
+    <form onsubmit="sendWhatsApp(event)">
+      <input type="text" id="name" placeholder="Tu nombre" required>
+      <select id="service" required>
+        <option value="">Selecciona servicio</option>
+        <option value="Curso de fútbol">Curso de fútbol</option>
+        <option value="Sitio web">Sitio web</option>
+      </select>
+      <textarea id="message" placeholder="Mensaje adicional"></textarea>
+      <button>Enviar por WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<section id="blog">
+  <div class="container">
+    <div class="title"><h2>Blog</h2></div>
+    <div class="cards">
+      <div class="blog-post">
+        <h3>Beneficios del fútbol en niños</h3>
+        <p>El fútbol ayuda al desarrollo físico y mental de los niños...</p>
+      </div>
+      <div class="blog-post">
+        <h3>¿Por qué tener un sitio web profesional?</h3>
+        <p>Un sitio web mejora tu visibilidad y credibilidad...</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contacto">
+  <p>📞 Llamadas: <strong>6669-0578</strong></p>
+  <p>© 2026 Futbolista Profesional</p>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/50766690578" target="_blank">💬</a>
+
+<script>
+function sendWhatsApp(e){
+ e.preventDefault();
+ let name=document.getElementById("name").value;
+ let service=document.getElementById("service").value;
+ let msg=document.getElementById("message").value;
+ let text=`Hola, mi nombre es ${name}. Estoy interesado en: ${service}. ${msg}`;
+ window.open("https://wa.me/50766690578?text="+encodeURIComponent(text));
+}
+</script>
+
+</body>
+</html>
